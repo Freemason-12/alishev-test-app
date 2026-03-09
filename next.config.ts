@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/alishev-test-app",
+  basePath: process.env.PAGES_BASE_PATH,
   output: "export",
 };
 
