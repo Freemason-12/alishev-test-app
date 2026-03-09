@@ -15,9 +15,9 @@ export default function Home() {
         </div>
         <div className="flex gap-4 justify-between">
           <Image src="/mdi_github.svg" alt="Github" width={20} height={20} />
-          <Image src="/mdi_discord.svg" alt="Github" width={20} height={20} />
-          <Image src="/mdi_reddit.svg" alt="Github" width={20} height={20} />
-          <Image src="/mdi_twitter.svg" alt="Github" width={20} height={20} />
+          <Image src="/mdi_discord.svg" alt="Discord" width={20} height={20} />
+          <Image src="/mdi_reddit.svg" alt="Reddit" width={20} height={20} />
+          <Image src="/mdi_twitter.svg" alt="Twitter" width={20} height={20} />
         </div>
       </div>
 
@@ -96,9 +96,9 @@ export default function Home() {
 
       <div className="flex gap-4 shrink">
         <Image src="/mdi_github.svg" alt="Github" width={20} height={20} />
-        <Image src="/mdi_discord.svg" alt="Github" width={20} height={20} />
-        <Image src="/mdi_reddit.svg" alt="Github" width={20} height={20} />
-        <Image src="/mdi_twitter.svg" alt="Github" width={20} height={20} />
+        <Image src="/mdi_discord.svg" alt="Discord" width={20} height={20} />
+        <Image src="/mdi_reddit.svg" alt="Reddit" width={20} height={20} />
+        <Image src="/mdi_twitter.svg" alt="Twitter" width={20} height={20} />
       </div>
     </footer>
   </>
