@@ -59,7 +59,7 @@ export default function Home() {
       <section id="reviews" className="py-5">
         <h1 className="text-6xl max-sm:text-4xl font-montserrat text-center my-10">Reviews</h1>
 
-        {userReviewsMetadata.map((review, index) => <script key={index}>{JSON.stringify(review)}</script>)}
+        {userReviewsMetadata.map((review, index) => <script type="application/ld+json" key={index}>{JSON.stringify(review)}</script>)}
 
         <div className="flex overflow-x-auto gap-3">
           {userReviewsMetadata.map((review, index) => (
@@ -68,7 +68,7 @@ export default function Home() {
                 By { // @ts-expect-error some typing issue with json-ld
                   review.author?.givenName} {review.author?.familyName}
               </nav>
-              <nav className="text-xl font-bold fancy-gradient bg-clip-text text-transparent">
+              <nav className="text-xl font-bold fancy-gradient bg-clip-text text-transparent inline-block">
                 { // @ts-expect-error some typing issue with json-ld
                   review.reviewRating?.ratingValue} out of 5
               </nav>
