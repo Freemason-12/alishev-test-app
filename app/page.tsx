@@ -2,10 +2,11 @@ import Image from "next/image";
 import { Button } from "@/src/components/Button/Button";
 import { BrainCircuit, Cog, Wrench } from "lucide-react";
 import { userReviewsMetadata } from "@/src/consts";
+const bp = process.env.PAGES_BASE_PATH || '';
 
 export default function Home() {
   return <>
-    <header className="bg-[url(/robots.webp)] bg-size-[90vw] bg-no-repeat bg-bottom min-h-screen pb-52">
+    <header className={`bg-[url(${bp}/robots.webp)] bg-size-[90vw] bg-no-repeat bg-bottom min-h-screen pb-52`}>
       <div className="flex justify-between items-center xl:px-49 md:py-12 md:px-24 max-md:flex-col max-md:gap-3 max-sm:p-5">
         <div className="font-montserrat font-medium text-2xl">Robotics AI</div>
         <div className="flex justify-between shrink gap-10 font-clash-grotesk">
@@ -14,10 +15,10 @@ export default function Home() {
           <a href="#contacts">Contact us</a>
         </div>
         <div className="flex gap-4 justify-between">
-          <Image src="/mdi_github.svg" alt="Github" width={20} height={20} />
-          <Image src="/mdi_discord.svg" alt="Discord" width={20} height={20} />
-          <Image src="/mdi_reddit.svg" alt="Reddit" width={20} height={20} />
-          <Image src="/mdi_twitter.svg" alt="Twitter" width={20} height={20} />
+          <Image src={`${bp}/mdi_github.svg`} alt="Github" width={20} height={20} />
+          <Image src={`${bp}/mdi_discord.svg`} alt="Discord" width={20} height={20} />
+          <Image src={`${bp}/mdi_reddit.svg`} alt="Reddit" width={20} height={20} />
+          <Image src={`${bp}/mdi_twitter.svg`} alt="Twitter" width={20} height={20} />
         </div>
       </div>
 
