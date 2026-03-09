@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #ffffff;
+  --background: #000000;
+  --fancy-gradient: linear-gradient(to right, #FF3BFF 0%, #ECBFBF 38%, #5C24FF 76%, #D94FD5 100%);
+}
+
+@theme inline {
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-clash-grotesk: var(--font-clash-grotesk);
+  --font-montserrat: var(--font-montserrat);
+}
+
+.fancy-gradient {
+  background-image: var(--fancy-gradient);
+}
+
+.fancy-border-gradient {
+  position: relative;
+}
+
+.fancy-border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: -2;
+  border-radius: 4rem;
+  padding: 2px;
+  background: var(--fancy-gradient);
+  mask: conic-gradient(#000 0 0) content-box, conic-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+html {
+  scroll-behavior: smooth !important;
+}
+
+a:hover {
+  text-decoration-line: underline;
+}
